@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+body {
+    margin: 0%;
+    background: #282d31;
+}
+
+.toggle {
+    width: 100%;
+    background: #282d31;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    display: none;
+    padding-right: 25px;
+}
+
+nav {
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+#checkbox,
+.toggle {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background: #282d31;
+}
+
+.menu li a {
+    text-decoration: none;
+    align-self: center;
+    font-size: 14px;
+    padding: 11px 14px;
+    transition: background .2s linear;
+}
+
+@media screen and (max-width: 800px) {
+    .menu li a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: right;
+        font-size: 20px;
+        line-height: 40px;
+        cursor: pointer;
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        color: #fff;
+        background: #282d31;
+        transition: all .1s linear;
+    }
+    .toggle:hover {
+        background: #cecece;
+    }
+    #checkbox:checked+label .second li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    #checkbox:checked+label .second {
+        height: 200px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 0px;
+        transition: height .3s linear;
+    }
+    .menu li {
+        display: flex;
+        /* magic */
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu li a {
+        width: 100%;
+        text-align: left;
+        align-self: left;
+        align-content: left;
+    }
+}
+
+.first {
+    background: #282d31;
+}
+
+.first li a {
+    color: #fff;
+}
+
+.first li a:hover {
+    background: #6d6268;
+}
+
+.second {
+    background: #282d31;
+}
+
+.second li a {
+    color: #fff;
+}
+
+.second li a:hover {
+    background: #5d5f6d;
+}
+
+.third {
+    background: #282d31;
+}
+
+.third li a {
+    color: #606060;
+}
+
+.third li a:hover {
+    background: #d5d5d5;
+}
+
+#slider {
+    background-image: url('/images/bg2.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 91vh;
+    z-index: -10;
+}
+
+.main-slider {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    height: 91vh;
+    background: rgba(0,0,0, 0.9)
+}
+/* .canvas {
+
+} */
+.main-slider > div .text-holder{
+    height: 91vh;
+}
+.text-holder p{
+    padding-top: 140px;
+    color: #fff;
+}
